@@ -12,16 +12,14 @@ description: "This page documents the 'bpf_task_storage_delete' eBPF helper func
 
 > Copyright (c) 2015 The Libbpf Authors. All rights reserved.
 
-
-
-Delete a bpf_local_storage from a _task_.
-The map must be of **BPF_MAP_TYPE_TASK_STORAGE** type and the second argument a valid BTF pointer to **struct task_struct**.
+Delete a bpf_local_storage from a `task`.
+The map must be of [`BPF_MAP_TYPE_TASK_STORAGE`](../map-type/BPF_MAP_TYPE_TASK_STORAGE.md) type and the second argument a valid BTF pointer to `struct task_struct`.
 
 ### Returns
 
 0 on success.
 
-**-ENOENT** if the bpf_local_storage cannot be found.
+`-ENOENT` if the `bpf_local_storage` cannot be found.
 
 `#!c static long (* const bpf_task_storage_delete)(void *map, struct task_struct *task) = (void *) 157;`
 

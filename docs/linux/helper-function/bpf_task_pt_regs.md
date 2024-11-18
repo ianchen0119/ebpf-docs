@@ -12,15 +12,13 @@ description: "This page documents the 'bpf_task_pt_regs' eBPF helper function, i
 
 > Copyright (c) 2015 The Libbpf Authors. All rights reserved.
 
-
-Get the struct pt_regs associated with **task**. Expects a BTF pointer to the "current" task. See [bpf_get_current_task_btf](../helper-function/bpf_get_current_task_btf.md) for more information.
+Get the `struct pt_regs` associated with `task`. Expects a BTF pointer to the "current" task. See [`bpf_get_current_task_btf`](../helper-function/bpf_get_current_task_btf.md) for more information.
 
 ### Returns
 
-A pointer to struct pt_regs.
+A pointer to `struct pt_regs`.
 
 `#!c static long (* const bpf_task_pt_regs)(struct task_struct *task) = (void *) 175;`
-
 
 ## Usage
 
